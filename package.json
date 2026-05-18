@@ -1,0 +1,36 @@
+{
+  "name": "pizza-planet",
+  "version": "1.0.0",
+  "description": "Pizza Planet — a Pizza ordering REST API for GitHub Copilot demo",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "jest --verbose",
+    "test:unit": "jest --verbose tests/unit",
+    "test:integration": "jest --verbose tests/integration"
+  },
+  "keywords": [
+    "pizza",
+    "api",
+    "express",
+    "typescript",
+    "demo"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.8.0",
+    "@types/supertest": "^7.2.0",
+    "jest": "^30.4.2",
+    "supertest": "^7.2.2",
+    "ts-jest": "^29.4.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
