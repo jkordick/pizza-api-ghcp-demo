@@ -5,3 +5,8 @@ dist/
 !jest.config.ts
 coverage/
 .env
+
+.github/agents/speckit*
+.github/prompts/speckit*
+
+specs/

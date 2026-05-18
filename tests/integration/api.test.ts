@@ -18,12 +18,14 @@ describe("POST /orders", () => {
       .post("/orders")
       .send({
         customerName: "Mario",
+        customerId: "mario-001",
         pizzas: [{ size: "medium", toppings: ["mozzarella", "basil"] }],
       });
 
     expect(res.status).toBe(201);
     expect(res.body.id).toBeDefined();
     expect(res.body.customerName).toBe("Mario");
+    expect(res.body.customerId).toBe("mario-001");
     expect(res.body.status).toBe("confirmed");
     expect(res.body.totalPrice).toBe(13);
   });
@@ -33,6 +35,7 @@ describe("POST /orders", () => {
       .post("/orders")
       .send({
         customerName: "Bowser",
+        customerId: "bowser-001",
         pizzas: [{ size: "medium", toppings: ["pineapple"] }],
       });
 
@@ -45,7 +48,7 @@ describe("POST /orders", () => {
   it("returns 422 for an empty pizza list", async () => {
     const res = await request(app)
       .post("/orders")
-      .send({ customerName: "Luigi", pizzas: [] });
+      .send({ customerName: "Luigi", customerId: "luigi-001", pizzas: [] });
 
     expect(res.status).toBe(422);
     expect(res.body.errors).toBeDefined();
@@ -56,6 +59,7 @@ describe("POST /orders", () => {
       .post("/orders")
       .send({
         customerName: "Toad",
+        customerId: "toad-001",
         pizzas: [
           {
             size: "large",
@@ -75,6 +79,7 @@ describe("POST /orders", () => {
       .post("/orders")
       .send({
         customerName: "",
+        customerId: "customer-001",
         pizzas: [{ size: "small", toppings: ["mozzarella"] }],
       });
 
@@ -88,6 +93,7 @@ describe("GET /orders/:id", () => {
       .post("/orders")
       .send({
         customerName: "Peach",
+        customerId: "peach-001",
         pizzas: [{ size: "small", toppings: ["basil"] }],
       });
 

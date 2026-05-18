@@ -7,6 +7,7 @@ export function createOrderRoutes(orderService: OrderService): Router {
   const controller = createOrderController(orderService);
 
   router.post("/", (req, res) => controller.createOrder(req, res));
+  router.post("/:id/cancel", (req, res) => controller.cancelOrder(req, res));
   router.get("/:id", (req, res) => controller.getOrderById(req, res));
   router.get("/", (req, res) => controller.getAllOrders(req, res));
 

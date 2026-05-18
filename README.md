@@ -121,3 +121,4 @@ src/
 2. Explain and execute `.github/prompts/copilot-instructions-creation.prompt.md` to create `.github/copilot-instructions.md` and show the result when it is done
 3. Explain agent skills and show skills in the repo: `convert-svg-to-png`, `run-tests`, and `lint-and-typecheck`
 4. Show `gh skill search terraform` in the terminal. Point to the importance of verifying skill providers and content.
+5. Switch to spec-kit branch and show the `specs/001-loyalty-points-system` folder with the plan, research, data model, quickstart, contracts, and tasks files.

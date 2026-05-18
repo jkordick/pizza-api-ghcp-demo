@@ -1,7 +1,7 @@
 import { Pizza } from "./pizza";
 
 /** Possible statuses for an order. */
-export type OrderStatus = "pending" | "confirmed" | "delivered";
+export type OrderStatus = "pending" | "confirmed" | "delivered" | "cancelled";
 
 /**
  * Represents a customer order containing one or more pizzas.
@@ -12,12 +12,18 @@ export interface Order {
   id: string;
   /** Customer name for the order. */
   customerName: string;
+  /** Customer identifier for loyalty tracking. */
+  customerId: string;
   /** List of pizzas in the order (1–10). */
   pizzas: Pizza[];
-  /** Total price in euros. */
+  /** Total price in euros (after any discounts). */
   totalPrice: number;
   /** Current status of the order. */
   status: OrderStatus;
   /** ISO timestamp of when the order was created. */
   createdAt: string;
+  /** Points earned from this order. */
+  pointsEarned: number;
+  /** Points redeemed on this order (0 or 100). */
+  pointsRedeemed: number;
 }
