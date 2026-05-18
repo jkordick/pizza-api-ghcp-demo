@@ -122,3 +122,7 @@ src/
 3. Explain agent skills and show skills in the repo: `convert-svg-to-png`, `run-tests`, and `lint-and-typecheck`
 4. Show `gh skill search terraform` in the terminal. Point to the importance of verifying skill providers and content.
 5. Switch to spec-kit branch and show the `specs/001-loyalty-points-system` folder with the plan, research, data model, quickstart, contracts, and tasks files.
+6. Switch to the `end-results` branch and kick off the implementation of GitHub issue (#1) with Squad.
+> I want to implement the a new feature.Here's what I'm building: check GitHub issue #1.
+7. Show the PR in GitHub (#2).
+8. Open a new Copilot window, select the `pr-review` agent, and ask it to review the PR (#2). Show the review comments. 
